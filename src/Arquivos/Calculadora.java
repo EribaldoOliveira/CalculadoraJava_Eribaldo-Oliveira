@@ -15,7 +15,7 @@ public class Calculadora {
 	private JTextField txtEtapas;
 	private JTextField txtResultado;
 	
-	//Variáveis para usarmos nas operações
+	//Variáveis para usarmos nas operações aritméticas
 	Double numero1, numero2;
 	String tipoOperacao = "nada";
 
@@ -40,9 +40,7 @@ public class Calculadora {
 	 */
 	public Calculadora() {
 		initialize();
-		
 	}
-
 
 	/**
 	 * Initialize the contents of the frame.
@@ -227,7 +225,7 @@ public class Calculadora {
 		
 		JButton btnIgual = new JButton("=");
 		btnIgual.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		  	public void actionPerformed(ActionEvent e) {
 				
 				//Após clicar no igual confirma a operação e adiciona o número da etapa 
 				txtEtapas.setText(txtEtapas.getText() + txtResultado.getText());
@@ -238,32 +236,16 @@ public class Calculadora {
 				//Limpando o campo do txtResultado
 				txtResultado.setText("");
 				
-				if(tipoOperacao.equals("adicao")){
+				//txtResultado.setText(tipoOperacao.equals("adicao")){
+				
+				if (tipoOperacao.equals("adicao")){
 					
-					//Somo o valor1 + valor2 e imprimo como texto no campo -> txtResultado
+					//Somo o valor1 + valor2 e imprimo como texto no campo -> txtResultado 
 					txtResultado.setText(String.valueOf(numero1 + numero2));
-				
-				}else if(tipoOperacao.equals("subtracao")){
+				}
 					
-					//Somo o valor1 - valor2 e imprimo como texto no campo -> txtResultado
-					txtResultado.setText(String.valueOf(numero1 - numero2));
-				
-				}else if(tipoOperacao.equals("divisao")){
-					
-					//Somo o valor1 / valor2 e imprimo como texto no campo -> txtResultado
-					txtResultado.setText(String.valueOf(numero1 / numero2));
-				
-				}else if(tipoOperacao.equals("multiplicacao")){
-					
-					//Somo o valor1 * valor2 e imprimo como texto no campo -> txtResultado
-					txtResultado.setText(String.valueOf(numero1 * numero2));
-					
-			}else{
-				
-				JOptionPane.showmessageDialog(null, "Por favor selecione uma operação");
 				
 			}
-				
 		});
 		btnIgual.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnIgual.setBounds(178, 255, 146, 39);
@@ -271,7 +253,7 @@ public class Calculadora {
 		
 		JButton btnAdicao = new JButton("+");
 		btnAdicao.addActionListener(new ActionListener() {
-			 public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent e) {
 				
 				// Junta o texto de Etapas com o texto de Resultado
 				if(tipoOperacao.equals("nada")) {
@@ -374,7 +356,7 @@ public class Calculadora {
 				// Pega todas as Etapas e inclui  a operação no final
 				txtEtapas.setText(txtEtapas.getText() + "/");
 				
-				//Pega o texto do Reultado e converte para Double
+				//Pega o texto do Resultado e converte para Double
 				numero1 = Double.parseDouble(txtResultado.getText());
 				
 				//Apagando o texto do campo de Resultado
