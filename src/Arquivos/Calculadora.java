@@ -227,7 +227,10 @@ public class Calculadora {
 		btnIgual.addActionListener(new ActionListener() {
 		  	public void actionPerformed(ActionEvent e) {
 				
-				//Após clicar no igual confirma a operação e adiciona o número da etapa 
+				
+		  		
+		  		
+		  		//Após clicar no igual confirma a operação e adiciona o número da etapa 
 				txtEtapas.setText(txtEtapas.getText() + txtResultado.getText());
 				
 				//Pega o texto do txtResultado e coloca como Double na variável -> numero2.
@@ -340,6 +343,7 @@ public class Calculadora {
 		btnMultiplicacao.setBounds(334, 205, 68, 39);
 		frmCalculadoraJava.getContentPane().add(btnMultiplicacao);
 		
+		// Parei na aula 63, seção 12, em 11m:48s
 		JButton btnDivisao = new JButton("/");
 		btnDivisao.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
