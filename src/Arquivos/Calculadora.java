@@ -422,6 +422,7 @@ public class Calculadora {
 		frmCalculadora.getContentPane().add(btnDivisao);
 		
 		txtEtapas = new JTextField();
+		txtEtapas.setBackground(new Color(255, 255, 255));
 		txtEtapas.setEditable(false);
 		txtEtapas.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		txtEtapas.setBounds(23, 38, 465, 49);
@@ -429,6 +430,8 @@ public class Calculadora {
 		txtEtapas.setColumns(10);
 		
 		txtResultado = new JTextField();
+		txtResultado.setForeground(new Color(0, 0, 255));
+		txtResultado.setBackground(new Color(255, 255, 255));
 		txtResultado.setEditable(false);
 		txtResultado.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		txtResultado.setColumns(10);
@@ -440,8 +443,9 @@ public class Calculadora {
 		frmCalculadora.getContentPane().add(panel);
 		
 		JLabel lblResultado = new JLabel("Resultado");
+		lblResultado.setForeground(new Color(0, 0, 255));
 		lblResultado.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblResultado.setBounds(200, 98, 96, 19);
+		lblResultado.setBounds(200, 98, 120, 19);
 		frmCalculadora.getContentPane().add(lblResultado);
 		
 		JLabel lblCalculo = new JLabel("Cálculo");
